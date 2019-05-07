@@ -7,5 +7,7 @@
 
 - [http://mrw.so/](http://mrw.so/) 【短链接、短网址】
 
+### 软件下载
 
+- https://xclient.info/ 【Mac 精品应用】
 
