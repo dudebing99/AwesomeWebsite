@@ -9,5 +9,9 @@
 
 ### 软件下载
 
-- https://xclient.info/ 【Mac 精品应用】
+- [https://xclient.info/](https://xclient.info/) 【Mac 精品应用】
+
+### 电子书
+
+- [https://haobook.org/](https://haobook.org/)【好书】
 
