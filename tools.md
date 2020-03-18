@@ -10,8 +10,8 @@
 ### 软件下载
 
 - [https://xclient.info/](https://xclient.info/) 【Mac 精品应用】
+- [https://zhs.moo0.com/](https://zhs.moo0.com/) 【音视频转换、压缩】
 
 ### 电子书
 
 - [https://haobook.org/](https://haobook.org/)【好书】
-
