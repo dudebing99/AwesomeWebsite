@@ -15,3 +15,8 @@
 ### 电子书
 
 - [https://haobook.org/](https://haobook.org/)【好书】
+
+### 音视频剪辑
+
+- [https://filmora.wondershare.com/video-editing-tips/blur-face.html](https://filmora.wondershare.com/video-editing-tips/blur-face.html) 【视频马赛克】
+
