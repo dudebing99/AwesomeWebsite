@@ -20,3 +20,6 @@
 
 - [https://filmora.wondershare.com/video-editing-tips/blur-face.html](https://filmora.wondershare.com/video-editing-tips/blur-face.html) 【视频马赛克】
 
+### 图片压缩
+
+- [https://tinypng.com/](https://tinypng.com/) 【PNG 压缩】
