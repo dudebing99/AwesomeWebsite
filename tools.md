@@ -22,4 +22,6 @@
 
 ### 图片压缩
 
-- [https://tinypng.com/](https://tinypng.com/) 【PNG 压缩】
+- [https://www.filedo.cn/img/zip](https://www.filedo.cn/img/zip)
+- [https://tinypng.com/](https://tinypng.com/)
+
