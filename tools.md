@@ -59,6 +59,10 @@
 
 - [https://www.mdnice.com/](https://www.mdnice.com/)【Markdown】
 
+### IP 定位
+
+- [https://ip-api.com/](https://ip-api.com/) 【全球 IP 定位，支持 IPv6】
+
 ### 综合类
 
 - [https://tool.lu/](https://tool.lu/)【程序员在线工具箱】
