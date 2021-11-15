@@ -67,6 +67,10 @@
 
 - [http://www.json2yaml.com/](http://www.json2yaml.com/)【json2yaml】
 
+### 发票合并
+
+- [https://fapiao.bangnimang.net](https://fapiao.bangnimang.net) [发票合并大师]
+
 ### 综合类
 
 - [https://tool.lu/](https://tool.lu/)【程序员在线工具箱】
