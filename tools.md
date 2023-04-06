@@ -74,3 +74,7 @@
 ### 综合类
 
 - [https://tool.lu/](https://tool.lu/)【程序员在线工具箱】
+
+### AI
+
+- https://ai-bot.cn/ 【AI 工具集】
