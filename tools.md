@@ -78,3 +78,7 @@
 ### UI/UX
 
 - [https://cssgradient.io/gradient-backgrounds/](https://cssgradient.io/gradient-backgrounds/)【CSS 梯度背景】
+
+### AI
+
+- https://ai-bot.cn/ 【AI 工具集】
