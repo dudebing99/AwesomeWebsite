@@ -3,10 +3,11 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -22,13 +23,11 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
-button, input, select, textarea { color: inherit; font: inherit; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
@@ -51,12 +50,12 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-tr { break-inside: avoid; break-after: auto; }
+thead, tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
 .CodeMirror { text-align: left; }
 .CodeMirror-placeholder { opacity: 0.3; }
 .CodeMirror pre { padding: 0px 4px; }
@@ -73,9 +72,10 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
 li div { padding-top: 0px; }
 blockquote { margin: 1rem 0px; }
 li .mathjax-block, li p { margin: 0.5rem 0px; }
@@ -87,12 +87,14 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
   .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -107,7 +109,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 [contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
 .math { font-size: 1rem; }
 .md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
 .md-toc-content { position: relative; margin-left: 0px; }
@@ -130,20 +132,21 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
 [lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
 video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
+iframe { max-width: 100%; width: 100%; border: medium; }
 .highlight td, .highlight tr { border: 0px; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
@@ -160,7 +163,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -168,10 +171,10 @@ mark .md-meta { color: rgb(0, 0, 0); }
 @media screen and (max-width: 800px) {
   .typora-export-sidebar { display: none; }
 }
-.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
 .outline-content ul { margin-top: 0px; margin-bottom: 0px; }
 .outline-content strong { font-weight: 400; }
-.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
 .outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
 .outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
 .outline-expander:hover::before { content: ""; }
@@ -184,14 +187,14 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
 .outline-label:hover { text-decoration: underline; }
 .outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
-.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
 .outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
 .outline-item-open > .outline-item > .outline-expander::before { content: ""; }
 .outline-children { display: none; }
 .info-panel-tab-wrapper { display: none; }
 .outline-item-open > .outline-children { display: block; }
 .typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
-.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
 .typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
 .typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
 .typora-export-collapse-outline .outline-children { display: none; }
@@ -199,6 +202,21 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
 
@@ -213,7 +231,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
   --control-text-color: #666;
 }
 
-/* ��ֹ�û��Զ��屳����ɫ����ҳ��Ӱ�죬�������û������Զ������� */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
 html {
   color: #333;
   background: #fff;
@@ -317,30 +335,30 @@ pre.md-meta-block {
 }
 
 
-/* ��������Ŀ��֧�� IE9+ | Chrome | Firefox �ȣ��Ƽ��� <html> ������ .borderbox ��� class */
+/* 如果你的项目仅支持 IE9+ | Chrome | Firefox 等，推荐在 <html> 中添加 .borderbox 这个 class */
 html.borderbox *, html.borderbox *:before, html.borderbox *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* ����߾�ͨ���ø����������ʽ�ı���λ�ò�ͬ */
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
 body, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   margin: 0;
   padding: 0;
 }
 
-/* ���� HTML5 ��ǩ, IE ��Ҫ�� js �� createElement(TAG) */
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
 article, aside, details, figcaption, figure, footer, header, menu, nav, section {
   display: block;
 }
 
-/* HTML5 ý���ļ��� img ����һ�� */
+/* HTML5 媒体文件跟 img 保持一致 */
 audio, canvas, video {
   display: inline-block;
 }
 
-/* Ҫע�����Ԫ�ز����̳и��� font ������ */
+/* 要注意表单元素并不继承父级 font 的问题 */
 body, button, input, select, textarea {
   font: 300 1em/1.8 "PingFang SC", "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Microsoft Sans Serif", "WenQuanYi Micro Hei", sans;
 }
@@ -375,18 +393,18 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-/* ȥ����Table cell �ı߾ಢ������غ� */
+/* 去掉各Table cell 的边距并让其边重合 */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* ȥ��Ĭ�ϱ߿� */
+/* 去除默认边框 */
 fieldset, img {
   border: 0;
 }
 
-/* ��/�������� */
+/* 块/段落引用 */
 blockquote {
   position: relative;
   color: #999;
@@ -402,13 +420,13 @@ blockquote {
   }
 }
 
-/* Firefox ���⣬Ԫ��û���»��ߣ������� */
+/* Firefox 以外，元素没有下划线，需添加 */
 acronym, abbr {
   border-bottom: 1px dotted;
   font-variant: normal;
 }
 
-/* ��������ʺţ���һ��ȷ��Ӧ�õ���������ȷ�ģ�Ҫ֪������������Ҳ�н�񱣬����㲻ȥ�����ǵö໨����ࣩ */
+/* 添加鼠标问号，进一步确保应用的语义是正确的（要知道，交互他们也有洁癖，如果你不去掉，那得多花点口舌） */
 abbr {
   cursor: help;
 }
@@ -418,12 +436,12 @@ address, caption, cite, code, dfn, th, var {
   font-weight: 400;
 }
 
-/* ȥ���б�ǰ�ı�ʶ, li ��̳У��󲿷���վͨ�����б����ܶ����ݣ�����Ӧ�õ�ȥ */
+/* 去掉列表前的标识, li 会继承，大部分网站通常用列表来很多内容，所以应该当去 */
 ul, ol {
   list-style: none;
 }
 
-/* �������Ű�����Ҫ������, ����ʲô������ */
+/* 对齐是排版最重要的因素, 别让什么都居中 */
 caption, th {
   text-align: left;
 }
@@ -432,7 +450,7 @@ q:before, q:after {
   content: '';
 }
 
-/* ͳһ�ϱ���±� */
+/* 统一上标和下标 */
 sub, sup {
   font-size: 75%;
   line-height: 0;
@@ -451,7 +469,7 @@ sub {
   bottom: -0.25em;
 }
 
-/* �������� hover ״̬����ʾ�»��� */
+/* 让链接在 hover 状态下显示下划线 */
 a {
   color: #1abc9c;
 }
@@ -470,12 +488,12 @@ a:hover {
   text-decoration: none;
 }
 
-/* Ĭ�ϲ���ʾ�»��ߣ�����ҳ���� */
+/* 默认不显示下划线，保持页面简洁 */
 ins, a {
   text-decoration: none;
 }
 
-/* ��ǣ���������д��ӫ��ʵ����� */
+/* 标记，类似于手写的荧光笔的作用 */
 mark {
   background: #fffdd1;
   border-bottom: 1px solid #ffedce;
@@ -483,7 +501,7 @@ mark {
   margin: 0 5px;
 }
 
-/* ����Ƭ�� */
+/* 代码片断 */
 pre, code, pre tt {
   font-family: Courier, 'Courier New', monospace;
 }
@@ -495,7 +513,7 @@ pre, code, pre tt {
   -webkit-overflow-scrolling: touch;
 }
 
-/* һ�»� horizontal rule */
+/* 一致化 horizontal rule */
 hr {
   border: none;
   border-bottom: 1px solid #cfcfcf;
@@ -514,7 +532,7 @@ hr {
   color: white;
 }
 
-/* ��֤��/����֮��Ŀհ׸��� */
+/* 保证块/段落之间的空白隔行 */
 #write p, #write .md-fences, #write ul, #write ol, #write dl, #write form, #write hr, #write figure,
 #write-p, #write-pre, #write-ul, #write-ol, #write-dl, #write-form, #write-hr, #write-table, blockquote {
   margin-bottom: 1.2em
@@ -524,7 +542,7 @@ html {
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
-/* ����Ӧ�ø��������ݣ��������������֣�margin ֵҪ��Ӧ���Ż� */
+/* 标题应该更贴紧内容，并与其他块区分，margin 值要相应做优化 */
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6,
 #write-h1, #write-h2, #write-h3, #write-h4, #write-h5, #write-h6 {
   margin-top: 1.2em;
@@ -555,7 +573,7 @@ html {
   font-size: 1.2em;
 }
 
-/* �������У�Ӧ�û�ԭ ul �� ol ����ʽ */
+/* 在文章中，应该还原 ul 和 ol 的样式 */
 #write ul, #write-ul {
   margin-left: 1.3em;
   list-style: disc;
@@ -768,9 +786,10 @@ a.md-toc-inner {
 }
 
 
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
 </style><title>tools</title>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h3 id='pdf-工具'><span>PDF 工具</span></h3><ul><li><a href='https://smallpdf.com/cn'><span>https://smallpdf.com/cn</span></a><span> 【PDF 压缩、转换、分割、合并、加密、解密等】</span></li><li><a href='https://smallpdf.com/'><span>https://smallpdf.com/</span></a><span> 【PDF 压缩、转换、分割、合并、加密、解密等】</span></li><li><a href='https://docsmall.com/'><span>https://docsmall.com/</span></a><span>【PDF 压缩、分割、合并】</span></li></ul><h3 id='短链接'><span>短链接</span></h3><ul><li><a href='http://mrw.so/'><span>http://mrw.so/</span></a><span> 【短链接、短网址】</span></li></ul><h3 id='软件下载'><span>软件下载</span></h3><ul><li><a href='https://xclient.info/'><span>https://xclient.info/</span></a><span> 【Mac 精品应用】</span></li><li><a href='https://zhs.moo0.com/'><span>https://zhs.moo0.com/</span></a><span> 【音视频转换、压缩】</span></li><li><a href='www.crx4chrome.com/'><span>www.crx4chrome.com/</span></a><span>【Chrome 插件下载】</span></li></ul><h3 id='电子书'><span>电子书</span></h3><ul><li><a href='https://haobook.org/'><span>https://haobook.org/</span></a><span>【好书】</span></li></ul><h3 id='音视频剪辑'><span>音视频剪辑</span></h3><ul><li><a href='https://filmora.wondershare.com/video-editing-tips/blur-face.html'><span>https://filmora.wondershare.com/video-editing-tips/blur-face.html</span></a><span> 【视频马赛克】</span></li></ul><h3 id='图片处理'><span>图片处理</span></h3><ul><li><a href='https://www.filedo.cn/img/zip'><span>https://www.filedo.cn/img/zip</span></a><span>【图片压缩】</span></li><li><a href='https://tinypng.com/'><span>https://tinypng.com/</span></a><span>【图片压缩】</span></li><li><a href='https://docsmall.com/'><span>https://docsmall.com/</span></a><span>【图片压缩】</span></li><li><a href='www.remove.bg/zh'><span>www.remove.bg/zh</span></a><span>【图片背景消除】</span></li></ul><h3 id='定时任务'><span>定时任务</span></h3><ul><li><a href='https://crontab.guru/'><span>https://crontab.guru/</span></a></li></ul><h3 id='在线绘图'><span>在线绘图</span></h3><ul><li><a href='https://gitmind.cn/'><span>https://gitmind.cn/</span></a><span>【思维导图、流程图】</span></li><li><a href='https://www.processon.com/'><span>https://www.processon.com/</span></a><span>【流程图】</span></li><li><a href='https://www.chuangkit.com/'><span>https://www.chuangkit.com/</span></a><span>【平面设计作图】</span></li><li><a href='https://excalidraw.com/'><span>https://excalidraw.com/</span></a><span>【简单图形绘制】</span></li></ul><h3 id='文件共享'><span>文件共享</span></h3><ul><li><a href='https://cowtransfer.com/'><span>https://cowtransfer.com/</span></a><span>【奶牛快传、文件上传下载共享】</span></li><li><a href='https://imgkr.com/' target='_blank' class='url'>https://imgkr.com/</a><span>【图片存储】</span></li></ul><h3 id='模型展示'><span>模型展示</span></h3><ul><li><a href='https://dimmy.club/'><span>https://dimmy.club/</span></a><span>【手机、电脑模型展示】</span></li><li><a href='http://browserframe.com/'><span>http://browserframe.com/</span></a><span>【打开站定网站，浏览器模型展示】</span></li><li><a href='https://carbon.now.sh/'><span>https://carbon.now.sh/</span></a><span>【代码片段转图片】</span></li></ul><h3 id='数据可视化'><span>数据可视化</span></h3><ul><li><a href='https://flourish.studio/'><span>https://flourish.studio/</span></a><span>【数据可视化工具】</span></li></ul><h3 id='文本编辑'><span>文本编辑</span></h3><ul><li><a href='https://www.mdnice.com/'><span>https://www.mdnice.com/</span></a><span>【Markdown】</span></li></ul><h3 id='ip-定位'><span>IP 定位</span></h3><ul><li><a href='https://ip-api.com/'><span>https://ip-api.com/</span></a><span> 【全球 IP 定位，支持 IPv6】</span></li></ul><h3 id='格式转换'><span>格式转换</span></h3><ul><li><a href='http://www.json2yaml.com/'><span>http://www.json2yaml.com/</span></a><span>【json2yaml】</span></li></ul><h3 id='发票合并'><span>发票合并</span></h3><ul><li><a href='https://fapiao.bangnimang.net'><span>https://fapiao.bangnimang.net</span></a><span> [发票合并大师]</span></li></ul><h3 id='综合类'><span>综合类</span></h3><ul><li><a href='https://tool.lu/'><span>https://tool.lu/</span></a><span>【程序员在线工具箱】</span></li></ul></div></div>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h3 id='pdf-工具'><span>PDF 工具</span></h3><ul><li><p><a href='https://smallpdf.com/cn'><span>https://smallpdf.com/cn</span></a><span> 【PDF 压缩、转换、分割、合并、加密、解密等】</span></p></li><li><p><a href='https://smallpdf.com/'><span>https://smallpdf.com/</span></a><span> 【PDF 压缩、转换、分割、合并、加密、解密等】</span></p></li><li><p><a href='https://docsmall.com/'><span>https://docsmall.com/</span></a><span>【PDF 压缩、分割、合并】</span></p></li></ul><h3 id='短链接'><span>短链接</span></h3><ul><li><p><a href='http://mrw.so/'><span>http://mrw.so/</span></a><span> 【短链接、短网址】</span></p></li></ul><h3 id='软件下载'><span>软件下载</span></h3><ul><li><p><a href='https://xclient.info/'><span>https://xclient.info/</span></a><span> 【Mac 精品应用】</span></p></li><li><p><a href='https://zhs.moo0.com/'><span>https://zhs.moo0.com/</span></a><span> 【音视频转换、压缩】</span></p></li><li><p><a href='www.crx4chrome.com/'><span>www.crx4chrome.com/</span></a><span>【Chrome 插件下载】</span></p></li></ul><h3 id='电子书'><span>电子书</span></h3><ul><li><p><a href='https://haobook.org/'><span>https://haobook.org/</span></a><span>【好书】</span></p></li></ul><h3 id='音视频剪辑'><span>音视频剪辑</span></h3><ul><li><p><a href='https://filmora.wondershare.com/video-editing-tips/blur-face.html'><span>https://filmora.wondershare.com/video-editing-tips/blur-face.html</span></a><span> 【视频马赛克】</span></p></li></ul><h3 id='图片处理'><span>图片处理</span></h3><ul><li><p><a href='https://www.filedo.cn/img/zip'><span>https://www.filedo.cn/img/zip</span></a><span>【图片压缩】</span></p></li><li><p><a href='https://tinypng.com/'><span>https://tinypng.com/</span></a><span>【图片压缩】</span></p></li><li><p><a href='https://docsmall.com/'><span>https://docsmall.com/</span></a><span>【图片压缩】</span></p></li><li><p><a href='www.remove.bg/zh'><span>www.remove.bg/zh</span></a><span>【图片背景消除】</span></p></li></ul><h3 id='定时任务'><span>定时任务</span></h3><ul><li><p><a href='https://crontab.guru/'><span>https://crontab.guru/</span></a></p></li></ul><h3 id='在线绘图'><span>在线绘图</span></h3><ul><li><p><a href='https://gitmind.cn/'><span>https://gitmind.cn/</span></a><span>【思维导图、流程图】</span></p></li><li><p><a href='https://www.processon.com/'><span>https://www.processon.com/</span></a><span>【流程图】</span></p></li><li><p><a href='https://www.chuangkit.com/'><span>https://www.chuangkit.com/</span></a><span>【平面设计作图】</span></p></li><li><p><a href='https://excalidraw.com/'><span>https://excalidraw.com/</span></a><span>【简单图形绘制】</span></p></li></ul><h3 id='文件共享'><span>文件共享</span></h3><ul><li><p><a href='https://cowtransfer.com/'><span>https://cowtransfer.com/</span></a><span>【奶牛快传、文件上传下载共享】</span></p></li><li><p><a href='https://imgkr.com/' target='_blank' class='url'>https://imgkr.com/</a><span>【图片存储】</span></p></li></ul><h3 id='模型展示'><span>模型展示</span></h3><ul><li><p><a href='https://dimmy.club/'><span>https://dimmy.club/</span></a><span>【手机、电脑模型展示】</span></p></li><li><p><a href='http://browserframe.com/'><span>http://browserframe.com/</span></a><span>【打开站定网站，浏览器模型展示】</span></p></li><li><p><a href='https://carbon.now.sh/'><span>https://carbon.now.sh/</span></a><span>【代码片段转图片】</span></p></li></ul><h3 id='数据可视化'><span>数据可视化</span></h3><ul><li><p><a href='https://flourish.studio/'><span>https://flourish.studio/</span></a><span>【数据可视化工具】</span></p></li></ul><h3 id='文本编辑'><span>文本编辑</span></h3><ul><li><p><a href='https://www.mdnice.com/'><span>https://www.mdnice.com/</span></a><span>【Markdown】</span></p></li></ul><h3 id='ip-定位'><span>IP 定位</span></h3><ul><li><p><a href='https://ip-api.com/'><span>https://ip-api.com/</span></a><span> 【全球 IP 定位，支持 IPv6】</span></p></li></ul><h3 id='格式转换'><span>格式转换</span></h3><ul><li><p><a href='http://www.json2yaml.com/'><span>http://www.json2yaml.com/</span></a><span>【json2yaml】</span></p></li></ul><h3><span>发票合并</span></h3><ul><li><p><a href='https://fapiao.bangnimang.net'><span>https://fapiao.bangnimang.net</span></a><span> 【发票合并大师】</span></p></li></ul><h3 id='综合类'><span>综合类</span></h3><ul><li><p><a href='https://tool.lu/'><span>https://tool.lu/</span></a><span>【程序员在线工具箱】</span></p></li></ul><h3 id='uiux'><span>UI/UX</span></h3><ul><li><p><a href='https://cssgradient.io/gradient-backgrounds/'><span>https://cssgradient.io/gradient-backgrounds/</span></a><span>【CSS 梯度背景】</span></p></li></ul></div></div>
 </body>
 </html>
