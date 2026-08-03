@@ -82,3 +82,7 @@
 ### AI
 
 - https://ai-bot.cn/ 【AI 工具集】
+
+### 字帖
+
+- [https://zitie.xueyuqu.com/](https://zitie.xueyuqu.com/)【免费田字格字帖生成器】
