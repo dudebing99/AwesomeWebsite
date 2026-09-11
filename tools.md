@@ -82,6 +82,7 @@
 ### AI
 
 - https://ai-bot.cn/ 【AI 工具集】
+- [https://studyarena.com](https://studyarena.com)【免费比较学习问题的三个 AI 回答，投票后揭晓模型】
 
 ### 字帖
 
